@@ -6,6 +6,7 @@ services:
     ports:
       - "4000:4000"
       - "8080:8080"
+      - "6006:6006"
     volumes:
       - ./:/project
       - ~/.npm:/root/.npm
