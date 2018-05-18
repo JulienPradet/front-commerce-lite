@@ -5,9 +5,9 @@
   "scripts": {
     "lint": "eslint --max-warnings=0 --fix \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:server": "NODE_ENV=development webpack --watch --config webpack.config.js --config-name server",
-    "dev:server": "NODE_ENV=development nodemon build/server.js",
-    "dev:client": "NODE_ENV=development webpack-dev-server --config webpack.config.js",
+    "watch:server": "cross-env NODE_ENV=development webpack --watch --config webpack.config.js --config-name server",
+    "dev:server": "cross-env NODE_ENV=development nodemon build/server.js",
+    "dev:client": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
     "start": "concurrently -k \"npm run watch:server\" \"npm run dev:server\" \"npm run dev:client\""
   },
   "repository": {
@@ -59,6 +59,7 @@
     "babel-eslint": "^7.2.3",
     "babel-loader": "^8.0.0-beta.2",
     "babel-polyfill": "^6.26.0",
+    "cross-env": "^5.1.5",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-config-react-app": "^2.1.0",
